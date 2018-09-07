@@ -88,6 +88,7 @@ h1::selection {
 @media only screen and (max-width: 600px) {
     .container{
         padding: 30px;
+        margin-top: 0;
     }
     h1 {
       font-size: 2rem;
