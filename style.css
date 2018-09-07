@@ -98,6 +98,9 @@ h1::selection {
       display: block;
       line-height: 2;
     }
+    .footer {
+      bottom: 20px;
+    }
 }
 
 /* Font */
