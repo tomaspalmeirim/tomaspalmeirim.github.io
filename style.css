@@ -1,10 +1,15 @@
+@font-face {
+  font-family: 'HelveticaNeue', sans-serif;
+  src: url(fonts/HelveticaNeue.ttf) format("truetype");
+}
+
 body {
-  font-family: 'SF Pro Display';
+  font-family: 'HelveticaNeue', sans-serif;
   color: #1c1c1c;
 }
 
 h1 {
-  font-family: 'Halyard', 'Helvetica Neue', 'SF Pro Display';
+  font-family: 'HelveticaNeue', sans-serif;
   color: #1c1c1c;
   margin: 0;
   line-height: 1.2;
@@ -25,6 +30,7 @@ h1 {
 }
 
 .secondary-link {
+  font-family: 'HelveticaNeue', sans-serif;
   color: #727272;
   text-decoration: none;
   line-height: 2.8;
@@ -55,6 +61,7 @@ h1 {
 }
 
 .link {
+  font-family: 'HelveticaNeue', sans-serif;
   color: #4900FF;
   text-decoration: none;
 }
@@ -83,35 +90,30 @@ h1::selection {
   color: white;
 }
 
-
-
 @media only screen and (max-width: 600px) {
-    .container{
-      padding: 15px;
-      margin-top: 0;
-    }
-    h1 {
-      font-size: 2rem;
-      line-height: 1.2;
-    }
-    .secondary-link {
-      display: block;
-      line-height: 2;
-    }
-    .footer {
-      bottom: 20px;
-    }
+  .container {
+    padding: 15px;
+    margin-top: 0;
+  }
+  h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  .secondary-link {
+    display: block;
+    line-height: 2;
+  }
+  .footer {
+    bottom: 20px;
+  }
 }
 
 /* Font */
 
 @font-face {
   font-family: 'brand-icon';
-  src:  url('fonts/brand-icon.eot?2995eq');
-  src:  url('fonts/brand-icon.eot?2995eq#iefix') format('embedded-opentype'),
-    url('fonts/brand-icon.ttf?2995eq') format('truetype'),
-    url('fonts/brand-icon.woff?2995eq') format('woff'),
-    url('fonts/brand-icon.svg?2995eq#brand-icon') format('svg');
+  src: url('fonts/brand-icon.eot?2995eq');
+  src: url('fonts/brand-icon.eot?2995eq#iefix') format('embedded-opentype'), url('fonts/brand-icon.ttf?2995eq') format('truetype'), url('fonts/brand-icon.woff?2995eq') format('woff'), url('fonts/brand-icon.svg?2995eq#brand-icon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -125,7 +127,6 @@ h1::selection {
   font-variant: normal;
   text-transform: none;
   line-height: 1;
-
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -136,11 +137,13 @@ h1::selection {
   padding-right: 10px;
   vertical-align: middle;
 }
+
 .icon-gmail:before {
   content: "\e901";
   padding-right: 10px;
   vertical-align: middle;
 }
+
 .icon-twitter:before {
   content: "\e902";
   padding-right: 10px;
