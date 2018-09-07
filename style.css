@@ -1,0 +1,144 @@
+body {
+  font-family: 'SF Pro Display';
+  color: #1c1c1c;
+}
+
+h1 {
+  font-family: 'Halyard', 'Helvetica Neue', 'SF Pro Display';
+  color: #1c1c1c;
+  margin: 0;
+  line-height: 1.2;
+  font-size: 3.5rem;
+}
+
+.container {
+  padding: 50px;
+  margin-top: 150px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 50px;
+  font-size: 1rem;
+  color: #727272;
+  text-decoration: none;
+}
+
+.secondary-link {
+  color: #727272;
+  text-decoration: none;
+  line-height: 2.8;
+  transition-duration: 0.2s;
+  margin-right: 25px;
+}
+
+.secondary-link:after {
+  border-bottom: 1px solid #cecece;
+  padding-top: 5px;
+}
+
+.secondary-link:hover {
+  color: #4900FF;
+  cursor: pointer;
+  transition-duration: 0.2s;
+}
+
+.divider {
+  content: '';
+  top: 50%;
+  left: 0;
+  border-top: 1px solid #ebebeb;
+  background: #ebebeb;
+  width: 50px;
+  transform: translateY(-50%);
+  margin-bottom: 5px;
+}
+
+.link {
+  color: #4900FF;
+  text-decoration: none;
+}
+
+.link:hover {
+  border-bottom: 4px solid #4900FF;
+  transition-duration: 0.1s;
+}
+
+.link:visited {
+  text-decoration: none;
+}
+
+h1::selection {
+  background-color: #4900FF;
+  color: white;
+}
+
+.link::selection {
+  background-color: #4900FF;
+  color: white;
+}
+
+.secondary-link::selection {
+  background-color: #4900FF;
+  color: white;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .container{
+        padding: 30px;
+    }
+    h1 {
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+    .secondary-link {
+      display: block;
+      line-height: 2;
+    }
+}
+
+/* Font */
+
+@font-face {
+  font-family: 'brand-icon';
+  src:  url('fonts/brand-icon.eot?2995eq');
+  src:  url('fonts/brand-icon.eot?2995eq#iefix') format('embedded-opentype'),
+    url('fonts/brand-icon.ttf?2995eq') format('truetype'),
+    url('fonts/brand-icon.woff?2995eq') format('woff'),
+    url('fonts/brand-icon.svg?2995eq#brand-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'brand-icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-github:before {
+  content: "\e900";
+  padding-right: 10px;
+  vertical-align: middle;
+}
+.icon-gmail:before {
+  content: "\e901";
+  padding-right: 10px;
+  vertical-align: middle;
+}
+.icon-twitter:before {
+  content: "\e902";
+  padding-right: 10px;
+  vertical-align: middle;
+}
