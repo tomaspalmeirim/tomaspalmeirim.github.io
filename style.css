@@ -1,168 +1,97 @@
 @font-face {
-  font-family: 'HelveticaNeue', sans-serif;
-  src: url(HelveticaNeue.ttf) format("truetype");
+  font-family: 'Questrial';
+  src: url(Questrial.woff) format("woff");
+}
+
+* {
+  font-family: 'Questrial', sans-serif;
+  color: #fff;
 }
 
 body {
-  font-family: 'HelveticaNeue', sans-serif;
-  color: #1c1c1c;
+  background: #000;
   user-select: none;
+  margin: 0;
 }
 
-h1 {
-  margin-top: 150px;
-  padding-left: 130px;
-  font-family: 'HelveticaNeue', sans-serif;
-  color: #1c1c1c;
+.text {
+  font-size: 1.8rem;
+  font-weight: 300;
   margin: 0;
-  line-height: 1.2;
-  font-size: 3.5rem;
+}
+
+span.text {
+  display: inline-block;
+  margin-top: 15px;
 }
 
 .container {
-  padding: 50px;
-  padding-top: 80px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 100px;
+}
+
+.logo-muse {
+  height: 30px;
+  margin: 0 0 1px -6px;
+  vertical-align: bottom;
+  transition: opacity .2s ease;
+}
+
+.logo-muse:hover {
+  opacity: .5;
 }
 
 .footer {
-  position: fixed;
-  bottom: 50px;
+  margin-top: 28px;
   font-size: 1rem;
-  color: #727272;
   text-decoration: none;
-}
-
-.t-logo {
-  float: left;
-  width: 70px;
-  padding: 10px 50px 50px 0;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, .3);
 }
 
 .secondary-link {
-  font-family: 'HelveticaNeue', sans-serif;
-  color: #727272;
+  font-family: system, sans-serif;
+  color: #fff;
   text-decoration: none;
   line-height: 2.8;
-  transition-duration: 0.2s;
   margin-right: 25px;
-}
-
-.secondary-link:after {
-  border-bottom: 1px solid #cecece;
-  padding-top: 5px;
+  transition: opacity .2s ease;
 }
 
 .secondary-link:hover {
-  color: #4900FF;
-  cursor: pointer;
-  transition-duration: 0.2s;
+  opacity: .5;
 }
 
-.divider {
-  content: '';
-  top: 50%;
-  left: 0;
-  border-top: 1px solid #ebebeb;
-  background: #ebebeb;
-  width: 50px;
-  transform: translateY(-50%);
-  margin-bottom: 5px;
-}
-
-.link {
-  font-family: 'HelveticaNeue', sans-serif;
-  color: #4900FF;
-  text-decoration: none;
-}
-
-.link:hover {
-  border-bottom: 4px solid #4900FF;
-  transition-duration: 0.1s;
-}
-
-.link:visited {
-  text-decoration: none;
-}
-
-h1::selection {
-  background-color: #4900FF;
-  color: white;
-}
-
-.link::selection {
-  background-color: #4900FF;
-  color: white;
-}
-
-.secondary-link::selection {
-  background-color: #4900FF;
-  color: white;
+h1::selection,
+.link::selection,
+.secondary-link::selection  {
+  background-color: #fff;
+  color: #000;
 }
 
 @media only screen and (max-width: 600px) {
   .container {
-    padding: 15px;
+    top: unset;
+    padding: 25px;
     margin-top: 0;
   }
-  h1 {
-    font-size: 2rem;
-    line-height: 1.2;
-    padding-left: 0;
+  .wrapper {
+    width: 100%;
+  }
+  .text {
+    margin: 0;
   }
   .secondary-link {
-    display: block;
+    display: inline-block;
     line-height: 2;
   }
   .footer {
-    bottom: 20px;
+    width: 100%;
   }
-  .t-logo {
-    display: block;
-    float: none;
-    width: 70px;
-    padding-top: 0;
-    padding-bottom: 25px;
-  }
-}
-
-/* Font */
-
-@font-face {
-  font-family: 'brand-icon';
-  src: url('fonts/brand-icon.eot?2995eq');
-  src: url('fonts/brand-icon.eot?2995eq#iefix') format('embedded-opentype'), url('fonts/brand-icon.ttf?2995eq') format('truetype'), url('fonts/brand-icon.woff?2995eq') format('woff'), url('fonts/brand-icon.svg?2995eq#brand-icon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'brand-icon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-github:before {
-  content: "\e900";
-  padding-right: 10px;
-  vertical-align: middle;
-}
-
-.icon-gmail:before {
-  content: "\e901";
-  padding-right: 10px;
-  vertical-align: middle;
-}
-
-.icon-twitter:before {
-  content: "\e902";
-  padding-right: 10px;
-  vertical-align: middle;
 }
