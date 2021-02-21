@@ -1,97 +1,79 @@
-@font-face {
-  font-family: 'Questrial';
-  src: url(Questrial.woff) format("woff");
+:root,
+:host {
+  --bg-color: #fff;
+  --text-color: #08040A;
 }
-
+@media (prefers-color-scheme: dark) {
+  :root,
+  :host {
+    --bg-color: #030305;
+    --text-color: #fff;
+  }
+}
 * {
-  font-family: 'Questrial', sans-serif;
-  color: #fff;
-}
-
-body {
-  background: #000;
-  user-select: none;
-  margin: 0;
-}
-
-.text {
-  font-size: 1.8rem;
+  font-family: -apple-system,BlinkMacSystemFont,'Arial',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
+  color: var(--text-color);
   font-weight: 300;
+  font-size: 20px;
+  user-select: none;
+}
+body {
+  background: var(--bg-color);
   margin: 0;
 }
-
-span.text {
-  display: inline-block;
-  margin-top: 15px;
-}
-
-.container {
+section {
   display: flex;
   align-items: center;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 100px;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
-
-.logo-muse {
-  height: 30px;
-  margin: 0 0 1px -6px;
-  vertical-align: bottom;
+img {
+  width: 420px;
+  margin: 0 40px 0 0;
+}
+a {
+  margin: 0 10px 0 0;
+  text-decoration: none;
+  user-select: all;
+}
+i {
+  opacity: 0;
   transition: opacity .2s ease;
 }
-
-.logo-muse:hover {
-  opacity: .5;
+a:hover i {
+  opacity: 1;
+}
+.link {
+  border: solid var(--text-color);
+  display: inline-block;
+  padding: 4px;
+  margin-top: -11px;
+  border-width: 0 1px 1px 0;
+  transform: rotate(-45deg);
 }
 
-.footer {
-  margin-top: 28px;
-  font-size: 1rem;
-  text-decoration: none;
-  padding-top: 25px;
-  border-top: 1px solid rgba(255, 255, 255, .3);
-}
-
-.secondary-link {
-  font-family: system, sans-serif;
-  color: #fff;
-  text-decoration: none;
-  line-height: 2.8;
-  margin-right: 25px;
-  transition: opacity .2s ease;
-}
-
-.secondary-link:hover {
-  opacity: .5;
-}
-
-h1::selection,
-.link::selection,
-.secondary-link::selection  {
-  background-color: #fff;
-  color: #000;
-}
-
-@media only screen and (max-width: 600px) {
-  .container {
-    top: unset;
-    padding: 25px;
-    margin-top: 0;
+@media (max-width: 720px) {
+  section {
+    justify-content: flex-start;
+    flex-direction: column;
   }
-  .wrapper {
+  img {
     width: 100%;
-  }
-  .text {
     margin: 0;
   }
-  .secondary-link {
-    display: inline-block;
-    line-height: 2;
+  a, p {
+    text-align: right;
+    margin-right: 0;
   }
-  .footer {
-    width: 100%;
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: inherit;
+    width: calc(100% - 60px);
+    padding: 30px;
+  }
+  .link {
+    display: none;
   }
 }
