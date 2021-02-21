@@ -54,6 +54,9 @@ a:hover i {
 }
 
 @media (max-width: 720px) {
+  i {
+    font-weight: 400;
+  }
   section {
     justify-content: flex-start;
     flex-direction: column;
