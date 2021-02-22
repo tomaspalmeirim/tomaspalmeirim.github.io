@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <meta charset='utf-8'/>
   <title>tomas</title>
-  <meta name="description" content="tomas palmeirim">
+  <meta name='description' content='tomas palmeirim'>
   <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png'>
   <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png'>
   <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png'>
@@ -100,7 +100,11 @@
 </head>
 <body>
   <main>
-    <img src='interface.png' alt=''>
+    <picture>
+      <source srcset='interface.webp' type='image/webp'>
+      <source srcset='interface.png' type='image/jpeg'> 
+      <img src='interface.png' alt=''>
+    </picture>
     <div class='info'>
       <a href='https://twitter.com/tomaspalmeirim' rel='noopener'>@tomaspalmeirim <i class='link'></i></a>
       <p>building interfaces at <a href='https://muse.ai' target='_blank' rel='noopener'>muse.ai <i class='link'></i></a></p>
