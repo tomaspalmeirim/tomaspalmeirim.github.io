@@ -1,9 +1,10 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
   <meta charset='utf-8'/>
   <title>tomas</title>
-  <link href='style.css' rel='stylesheet' type='text/css'>
+  <meta name="description" content="tomas palmeirim">
   <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png'>
   <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png'>
   <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png'>
@@ -11,15 +12,100 @@
   <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#4900ff'>
   <meta name='msapplication-TileColor' content='#4900ff'>
   <meta name='theme-color' content='#ffffff'>
+  <style>
+    :root,
+    :host {
+      --bg-color: #fff;
+      --text-color: #08040A;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root,
+      :host {
+        --bg-color: #030305;
+        --text-color: #fff;
+      }
+    }
+    * {
+      font-family: -apple-system,BlinkMacSystemFont,'Arial',Roboto,Oxygen-Sans,Ubuntu,Cantarell,'Helvetica Neue',sans-serif;
+      color: var(--text-color);
+      font-weight: 300;
+      font-size: 20px;
+      user-select: none;
+    }
+    html, body {
+      height: 100%;
+      background: var(--bg-color);
+      margin: 0;
+    }
+    main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+    img {
+      width: 420px;
+      margin: 0 40px 0 0;
+    }
+    a {
+      margin: 0 10px 0 0;
+      text-decoration: none;
+      user-select: all;
+    }
+    i {
+      opacity: 0;
+      transition: opacity .2s ease;
+    }
+    a:hover i {
+      opacity: 1;
+    }
+    .link {
+      border: solid var(--text-color);
+      display: inline-block;
+      padding: 4px;
+      margin-top: -11px;
+      border-width: 0 1px 1px 0;
+      transform: rotate(-45deg);
+    }
+
+    @media (max-width: 780px) {
+      i {
+        font-weight: 400;
+      }
+      main {
+        justify-content: flex-start;
+        flex-direction: column;
+      }
+      img {
+        width: 100%;
+        margin: 0;
+      }
+      a, p {
+        text-align: right;
+        margin-right: 0;
+      }
+      .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: inherit;
+        width: calc(100% - 60px);
+        padding: 30px;
+      }
+      .link {
+        display: none;
+      }
+    }
+  </style>
 </head>
 <body>
-  <section>
+  <main>
     <img src='interface.png' alt=''>
     <div class='info'>
       <a href='https://twitter.com/tomaspalmeirim'>@tomaspalmeirim <i class='link'></i></a>
       <p>building interfaces at <a href='https://muse.ai' target='_blank'>muse.ai <i class='link'></i></a></p>
       <a href='mailto:tomas@muse.ai?subject=Hey there'>tomas@muse.ai <i class='link'></i></a>
     </div>
-  </section>
+  </main>
 </body>
 </html>
