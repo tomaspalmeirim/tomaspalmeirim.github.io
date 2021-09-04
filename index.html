@@ -49,10 +49,15 @@
       width: 420px;
       margin: 0 40px 0 0;
     }
-    a {
-      margin: 0 10px 0 0;
+    a, p {
+      display: block;
+      margin: 0 10px 20px 0;
       text-decoration: none;
       user-select: all;
+    }
+    p a {
+      display: inline-block;
+      margin: 0 10px 0 0;
     }
     i {
       opacity: 0;
@@ -83,7 +88,11 @@
       }
       a, p {
         text-align: right;
-        margin-right: 0;
+        margin-right: 0!important;
+      }
+      a:last-of-type {
+        margin-bottom: 0;
+        word-wrap: anywhere;
       }
       .info {
         display: flex;
@@ -106,9 +115,10 @@
       <img src='interface.png' alt=''>
     </picture>
     <div class='info'>
-      <a href='https://twitter.com/tomaspalmeirim' rel='noopener'>@tomaspalmeirim <i class='link'></i></a>
+      <a href='https://twitter.com/tomaspalm' rel='noopener'>@tomaspalm <i class='link'></i></a>
       <p>building interfaces at <a href='https://muse.ai' target='_blank' rel='noopener'>muse.ai <i class='link'></i></a></p>
       <a href='mailto:tomas@muse.ai?subject=Hey there'>tomas@muse.ai <i class='link'></i></a>
+      <a href='https://rainbow.me/tomaspalm.eth'>0xc734abc7a7737de1ca7bf81c4dc8612bf1887b54 <i class='link'></i></a>
     </div>
   </main>
 </body>
